@@ -138,7 +138,7 @@ To sign ''m'' for public key ''dG'':
 * Let ''R = k'G''.
 * Let ''k = k' '' if ''jacobi(y(R)) = 1'', otherwise let ''k = n - k' ''.
 * Let ''e = int(hash(bytes(x(R)) || bytes(dG) || m)) mod n''.
-* The signature is ''bytes(x(R)) || bytes(k + ed mod n)''.
+* The signature is ''bytes(x(R)) || bytes((k + ed) mod n)''.
 
 Note that this is not a ''unique signature'' scheme: while this algorithm will always produce the same signature for a given message and public key, ''k'' (and hence ''R'') may be generated in other ways (such as by a CSPRNG) producing a different, but still valid, signature.
 
