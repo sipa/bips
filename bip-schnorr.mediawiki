@@ -117,7 +117,7 @@ All provided signatures are valid with overwhelming probability if and only if t
 * Generate ''u-1'' random integers ''a<sub>2...u</sub>'' in the range ''1...n-1''. These can either be generated deterministically using a [https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator CSPRNG] seeded by a cryptographic hash (e.g., SHA256) of all inputs of the algorithm, or be randomly generated independently for each run of the batch verification algorithm.
 * For ''i = 1 .. u'':
 ** Let ''P<sub>i</sub> = point(pk<sub>i</sub>)''; fail if ''point(pk<sub>i</sub>)'' fails.
-** Let ''r = int(sig<sub>i</sub>[0:32])''; fail if ''r &ge; p''.
+** Let ''r<sub>i</sub> = int(sig<sub>i</sub>[0:32])''; fail if ''r<sub>i</sub> &ge; p''.
 ** Let ''s<sub>i</sub> = int(sig<sub>i</sub>[32:64])''; fail if ''s<sub>i</sub> &ge; n''.
 ** Let ''e<sub>i</sub> = int(hash(bytes(r) || bytes(P<sub>i</sub>) || m<sub>i</sub>)) mod n''.
 ** Let ''c = r<sup>3</sup> + 7 mod p''.
