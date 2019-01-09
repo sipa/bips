@@ -119,7 +119,7 @@ All provided signatures are valid with overwhelming probability if and only if t
 ** Let ''P<sub>i</sub> = point(pk<sub>i</sub>)''; fail if ''point(pk<sub>i</sub>)'' fails.
 ** Let ''r<sub>i</sub> = int(sig<sub>i</sub>[0:32])''; fail if ''r<sub>i</sub> &ge; p''.
 ** Let ''s<sub>i</sub> = int(sig<sub>i</sub>[32:64])''; fail if ''s<sub>i</sub> &ge; n''.
-** Let ''e<sub>i</sub> = int(hash(bytes(r) || bytes(P<sub>i</sub>) || m<sub>i</sub>)) mod n''.
+** Let ''e<sub>i</sub> = int(hash(bytes(r<sub>i</sub>) || bytes(P<sub>i</sub>) || m<sub>i</sub>)) mod n''.
 ** Let ''c = r<sup>3</sup> + 7 mod p''.
 ** Let ''y = c<sup>(p+1)/4</sup> mod p''.
 ** Fail if ''c &ne; y<sup>2</sup> mod p''.
