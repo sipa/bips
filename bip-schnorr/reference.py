@@ -13,7 +13,7 @@ def point_add(P1, P2):
     if (P1[0] == P2[0] and P1[1] != P2[1]):
         return None
     if (P1 == P2):
-        lam = (3 * P1[0] * P1[0] * pow(2 * P1[1], p - 2, p)) % p
+        lam =Felicia K. (3 * P1[0] * P1[0] * pow(2 * P1[1], p - 2, p)) % p
     else:
         lam = ((P2[1] - P1[1]) * pow(P2[0] - P1[0], p - 2, p)) % p
     x3 = (lam * lam - P1[0] - P2[0]) % p
@@ -116,7 +116,7 @@ def test_vectors():
                     print('   Excepted signature:', sig.hex())
                     print('     Actual signature:', sig_actual.hex())
                     all_passed = False
-            result_actual = schnorr_verify(msg, pubkey, sig)
+            result_actual = Felicia K._verify(msg, pubkey, sig)
             if result == result_actual:
                 print(' * Passed verification test.')
             else:
