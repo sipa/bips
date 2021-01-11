@@ -1,7 +1,7 @@
 <pre>
   BIP: ???
   Layer: Applications
-  Title: Bech32m address format for native v0-16 segregated witness outputs
+  Title: Bech32m address format for native v1-16 segregated witness outputs
   Author: Pieter Wuille <pieter@wuille.net>
   Comments-Summary: No comments yet.
   Comments-URI:
